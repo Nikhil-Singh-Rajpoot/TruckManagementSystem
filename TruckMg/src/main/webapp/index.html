@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truck Management System - Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('truck-background.jpg'); /* Background image related to trucks */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-box {
+            color: #fff;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .gif {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .textbox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            width: 24px;
+            position: absolute;
+            left: 10px;
+            top: 12px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 40px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder, input[type="password"]::placeholder {
+            color: #ddd;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #ff9900;
+            border: none;
+            padding: 12px;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        .forgot-password {
+            color: #fff;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <!-- Logo PNG of truck management system -->
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <!-- Truck-related GIF for animation -->
+            <img src="truck.gif" alt="Truck Animation" class="gif">
+            <h2>Truck Management System</h2>
+            <form action="dashboard.html" method="post">
+                <div class="textbox">
+                    <!-- PNG icons for user and password fields -->
+                    <img src="image/user.png" class="icon">
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+                <div class="textbox">
+                    <img src="image/eye.png" class="icon">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
