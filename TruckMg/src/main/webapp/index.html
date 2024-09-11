@@ -3,130 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truck Management System - Login</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+		
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            background-image: url('truck-background.jpg'); /* Background image related to trucks */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
 
-        .container {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
+.container {
+    width: 80%;
+    max-width: 900px;
+    height: 70vh;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-        .login-box {
-            color: #fff;
-        }
+.left {
+    flex: 1;
+    background-color: #ddd;
+}
 
-        .logo {
-            width: 100px;
-            margin-bottom: 20px;
-        }
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        .gif {
-            width: 150px;
-            margin-bottom: 20px;
-        }
+.right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 
-        .textbox {
-            position: relative;
-            margin-bottom: 20px;
-        }
+.input-group {
+    margin-bottom: 15px;
+}
 
-        .icon {
-            width: 24px;
-            position: absolute;
-            left: 10px;
-            top: 12px;
-        }
+label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 12px 40px;
-            border: none;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            color: #fff;
-            font-size: 16px;
-            outline: none;
-        }
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-        input[type="text"]::placeholder, input[type="password"]::placeholder {
-            color: #ddd;
-        }
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .btn {
-            width: 100%;
-            background-color: #ff9900;
-            border: none;
-            padding: 12px;
-            color: #fff;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+button:hover {
+    background-color: #0056b3;
+}
 
-        .btn:hover {
-            background-color: #e68a00;
-        }
+p {
+    margin-top: 20px;
+    text-align: center;
+}
 
-        .forgot-password {
-            color: #fff;
-            text-decoration: none;
-            margin-top: 10px;
-            display: inline-block;
-        }
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
 
-        .forgot-password:hover {
-            text-decoration: underline;
-        }
-    </style>
+p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .right {
+        padding: 30px;
+    }
+}
+
+	</style>
 </head>
 <body>
     <div class="container">
-        <div class="login-box">
-            <!-- Logo PNG of truck management system -->
-            <img src="logo.png" alt="Company Logo" class="logo">
-            <!-- Truck-related GIF for animation -->
-            <img src="truck.gif" alt="Truck Animation" class="gif">
-            <h2>Truck Management System</h2>
-            <form action="dashboard.html" method="post">
-                <div class="textbox">
-                    <!-- PNG icons for user and password fields -->
-                    <img src="image/user.png" class="icon">
-                    <input type="text" placeholder="Username" name="username" required>
+        <div class="left">
+            <img src="your-image.png" alt="Login Image">
+        </div>
+        <div class="right">
+            <h2>Login</h2>
+            <form action="/submit" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
                 </div>
-                <div class="textbox">
-                    <img src="image/eye.png" class="icon">
-                    <input type="password" placeholder="Password" name="password" required>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn">Login</button>
-                <a href="#" class="forgot-password">Forgot Password?</a>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#">Sign up</a></p>
             </form>
         </div>
     </div>
